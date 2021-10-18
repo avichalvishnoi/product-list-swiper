@@ -1,0 +1,8 @@
+Primary color used are: white, Black and red(#fb564f)
+
+Height of Photo: 40%
+Height of Body: 50%
+Height of Footer: 10% (contains two buttons)
+
+Primary Margin : "mx-6"
+

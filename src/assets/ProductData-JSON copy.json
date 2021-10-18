@@ -1,0 +1,86 @@
+ product = '[
+    {
+        "ID": 1001,
+        "Name": "Shirt",
+        "Image": "",
+        "Price": 500,
+        "Discount": 15,
+        "Shop": "Fashion Shop"
+    },
+    {
+        "ID": 1002,
+        "Name": "T- Shirt",
+        "Image": "",
+        "Price": 1200,
+        "Discount": 29,
+        "Shop": "ClothesCenter"
+    },
+    {
+        "ID": 1003,
+        "Name": "Pant",
+        "Image": "",
+        "Price": 300,
+        "Discount": 10,
+        "Shop": "New Trends"
+    },
+    {
+        "ID": 1004,
+        "Name": "Tie",
+        "Image": "",
+        "Price": 292,
+        "Discount": 5,
+        "Shop": "Big Market"
+    },
+    {
+        "ID": 1005,
+        "Name": "Shoes",
+        "Image": "",
+        "Price": 398,
+        "Discount": 2,
+        "Shop": "Fashion Shop"
+    },
+    {
+        "ID": 1006,
+        "Name": "Socks",
+        "Image": "",
+        "Price": 499,
+        "Discount": 0,
+        "Shop": "Dulha House"
+    },
+    {
+        "ID": 1007,
+        "Name": "Cap",
+        "Image": "",
+        "Price": 333,
+        "Discount": 0,
+        "Shop": "CapCap"
+    },
+    {
+        "ID": 1008,
+        "Name": "Belt",
+        "Image": "",
+        "Price": 583,
+        "Discount": 10,
+        "Shop": "Belt Shop"
+    },
+    {
+        "ID": 1009,
+        "Name": "Saree",
+        "Image": "",
+        "Price": 1092,
+        "Shop": "Big Market"
+    },
+    {
+        "ID": 1093,
+        "Discount": 2,
+        "Shop": "Dulha House"
+    },
+    {
+        "ID": 1010,
+        "Name": "Sandel",
+        "Image": "",
+        "Price": 293,
+        "Discount": 15,
+        "Shop": "Big Market"
+    }
+]';

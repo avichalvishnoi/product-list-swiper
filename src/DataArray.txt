@@ -1,0 +1,129 @@
+/*[
+                {
+                    "ID": 1001,
+                    "Name": "Shirt",
+                    "Image": "https://5.imimg.com/data5/YJ/BO/MY-10973479/mens-designer-casual-shirt-500x500.jpg",
+                    "Price": 500,
+                    "Discount": 15,
+                    "Shop": "Fashion Shop",
+                    "Rating": 3.8,
+                    "Discription": "Blue color shirt with 80% cotton and 20% silk." 
+                },
+                {
+                    "ID": 1002,
+                    "Name": "T- Shirt",
+                    "Image": "https://static.zajo.net/content/mediagallery/zajo_dcat/image/product/types/X/9088.png",
+                    "Price": 1200,
+                    "Discount": 29,
+                    "Shop": "ClothesCenter",
+                    "Rating": 4.8,
+                    "Discription": "Blue color shirt with 80% cotton and 20% silk." 
+                },
+                {
+                    "ID": 1003,
+                    "Name": "Pant",
+                    "Image": "https://www.lafuma.com/media/catalog/product/cache/18/image/9df78eab33525d08d6e5fb8d27136e95/l/f/lfv11318-2768-pantalon-homme-access-cargo-pants-m-beige_2.jpg",
+                    "Price": 300,
+                    "Discount": 10,
+                    "Shop": "New Trends",
+                    "Rating": 2.8,
+                    "Discription": "Blue color shirt with 80% cotton and 20% silk." 
+                },
+                {
+                    "ID": 1004,
+                    "Name": "Tie",
+                    "Image": "https://i.insider.com/5df40875fd9db245f56a7eba?width=1200&format=jpeg",
+                    "Price": 292,
+                    "Discount": 5,
+                    "Shop": "Big Market",
+                    "Rating": 5,
+                    "Discription": "Blue color shirt with 80% cotton and 20% silk." 
+                },
+                {
+                    "ID": 1005,
+                    "Name": "Shoes",
+                    "Image": "https://assets.ajio.com/medias/sys_master/root/h5a/h59/13018715881502/-1117Wx1400H-460342492-blue-MODEL.jpg",
+                    "Price": 398,
+                    "Discount": 2,
+                    "Shop": "Fashion Shop",
+                    "Rating": 4.2,
+                    "Discription": "Blue color shirt with 80% cotton and 20% silk." 
+                },
+                {
+                    "ID": 1006,
+                    "Name": "Socks",
+                    "Image": "https://www.dim.com/dw/image/v2/AARR_PRD/on/demandware.static/-/Sites-dim-master/default/dw00b2106a/D025WM2-0HY_01.jpg?sw=600&sh=600&sm=fit",
+                    "Price": 499,
+                    "Discount": 0,
+                    "Shop": "Dulha House",
+                    "Rating": 2.5,
+                    "Discription": "Blue color shirt with 80% cotton and 20% silk." 
+                },
+                {
+                    "ID": 1007,
+                    "Name": "Cap",
+                    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjCQS-yCWozc0yrFo00az6GceXY3ltUvPFi5Tj9NJaOagGDk8qSza2uI7HfJl_1ethtZQ&usqp=CAU",
+                    "Price": 333,
+                    "Discount": 0,
+                    "Shop": "CapCap",
+                    "Rating": 3.5,
+                    "Discription": "Blue color shirt with 80% cotton and 20% silk." 
+                },
+                {
+                    "ID": 1008,
+                    "Name": "Belt",
+                    "Image": "https://m.media-amazon.com/images/I/91wCigDXGCL._UX679_.jpg",
+                    "Price": 583,
+                    "Discount": 10,
+                    "Shop": "Belt Shop",
+                    "Rating": 3.3,
+                    "Discription": "Blue color shirt with 80% cotton and 20% silk." 
+                },
+                {
+                    "ID": 1009,
+                    "Name": "Saree",
+                    "Image": "",
+                    "Price": 1092,
+                    "Discount": 15,
+                    "Shop": "Big Market",
+                    "Rating": 4.3,
+                    "Discription": "Blue color shirt with 80% cotton and 20% silk." 
+                },
+                {
+                    "ID": 1010,
+                    "Name": "Sandel",
+                    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3Z8gOQBqwtpJqfaYT46NojuEXLXldfrcpaw&usqp=CAU",
+                    "Price": 293,
+                    "Discount": 15,
+                    "Shop": "Big Market",
+                    "Rating": 2.0,
+                    "Discription": "Blue color shirt with 80% cotton and 20% silk." 
+                }
+                ]*/
+
+
+
+<template>
+  <v-row  justify="center" class="my-12">
+    <!-- <v-menu transition="slide-y-transition">
+      <template v-slot:activator="{ on, attrs }">  <v-btn  color="primary"  class="ma-2"  v-bind="attrs"  v-on="on">Slide Y Transition</v-btn></template>
+      
+      <v-list>  <v-list-item v-for="n in 5" :key="n" link><v-list-item-title v-text="'Item ' + n"></v-list-item-title>  </v-list-item></v-list>
+    </v-menu> -->
+
+    <div class="mx-4 hidden-sm-and-down"></div>
+
+    <v-menu transition="slide-y-reverse-transition">
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn  color="secondary"  class="ma-2"  v-bind="attrs"  v-on="on">  Slide Y Reverse Transition</v-btn> 
+      </template>
+
+      <v-list>
+        <v-list-item  v-for="n in 5"  :key="n"  link> I am at {{n}}
+          <!-- <v-list-item-title v-text="'Item ' + n"></v-list-item-title> -->
+        </v-list-item>
+      </v-list>
+    </v-menu>
+
+  </v-row>
+</template>

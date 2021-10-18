@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Upload CSV Page</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.1/papaparse.min.js" integrity="sha512-EbdJQSugx0nVWrtyK3JdQQ/03mS3Q1UiAhRtErbwl1YL/+e2hZdlIcSURxxh7WXHTzn83sjlh2rysACoJGfb6g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src='https://docs.google.com/spreadsheets/d/e/2PACX-1vTXXohJ3qiYbvGvKURF_gP1Wu6_Cqfz5r369LeXMhclvxRvkGikJJX-gE2Z7rlhFN8tIE8_UdoFequ7/pub?gid=0&single=true&output=csv'></script>
+  </head>              
+
+  <body>
+    Hello World
+  </body>
+
+  <script>
+const xhr = new XMLHttpRequest();
+
+xhr.open('get', 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTXXohJ3qiYbvGvKURF_gP1Wu6_Cqfz5r369LeXMhclvxRvkGikJJX-gE2Z7rlhFN8tIE8_UdoFequ7/pub?gid=0&single=true&output=csv', true);
+
+xhr.onreadystatechange = function()
+{
+	if(xhr.readyState=4)
+		{
+			if(xhr.status == 200)
+			{
+        console.log(xhr.responseText);
+			}
+
+      if(xhr.status = 404)
+		  { 
+			  console.log('File or resource not fount');
+		  }
+	  }
+};
+
+
+xhr.send();
+// console.log('something here');
+
+let url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTXXohJ3qiYbvGvKURF_gP1Wu6_Cqfz5r369LeXMhclvxRvkGikJJX-gE2Z7rlhFN8tIE8_UdoFequ7/pub?gid=0&single=true&output=csv';
+
+Papa.parse(url, {
+	download: true,
+  header: true,
+  complete: function(results, file) {
+	console.log("Parsing complete:", results, file);
+}
+	// rest of config ...
+})
+
+
+  </script>
+</html>
