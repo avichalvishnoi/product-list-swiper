@@ -5,9 +5,9 @@ import store from './store'
 import vuetify from './plugins/vuetify'
 //import VuePapaParse from "https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.1/papaparse.min.js"
 //import VuePapaParse from 'vue-papa-parse'
-import * as Papa from 'papaparse'
+import VuePapaParse from 'papaparse'
 
-Vue.use(Papa)
+Vue.use(VuePapaParse)
 
 new Vue({
   router,
