@@ -1,5 +1,5 @@
-<template>    
-    <v-app style="height: 100vh; max-width:400px;" >
+<template>   
+    <v-app style="height: 100vh; max-width:400px;">         <!-- LATEST UPDATE -->
         <swiper ref="mySwiper" @slideChange="swipeSlide" :options="swiperOptions" :slides-per-view="1" :space-between="0">
             <swiper-slide v-for="item in product" :key="item.id"><Card :product="item" /></swiper-slide>
         </swiper>
@@ -57,7 +57,7 @@ import 'swiper/css/swiper.css'
                        this.slideIndex = i 
                     }
                 }  
-                       console.log(" param id = ",this.$route.params.id,"\n slide index = ",this.slideIndex)
+
                 if(this.$route.params.id==1001)
                 {
                     this.swiper.slideTo(this.slideIndex, this.product.length, false)
