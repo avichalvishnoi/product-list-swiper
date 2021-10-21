@@ -2,7 +2,7 @@
         <v-card v-if="product">
             <Imge  style="height: 40vh; " :imageLink="(product.Image)"/>         
             <Body style="height: 50vh;" :ProductDetails="product"/>       
-            <Footer style="height: 10vh;"/>             
+            <Footer style="height: 10vh;" :subject="product.Name" :discription="product.Discription"/>             
         </v-card>
 </template>
 
@@ -14,6 +14,6 @@ import Footer from '../Components/Footer.vue'
 export default {
     name: "Card",
     components: {Imge, Body, Footer},
-    props: ["product"]
+    props: ["product"],
 }
 </script>

@@ -2,8 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Start from '../Pages/Start.vue'
 import NotFound from '../Pages/404.vue';
-import VuePapaParse from 'vue-papa-parse'
-Vue.use(VuePapaParse)
 
 
 Vue.use(VueRouter)

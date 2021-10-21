@@ -3,10 +3,12 @@
 
         <v-btn @click="overlay = !overlay" class="sucess" rounded color="primary" dark> Share</v-btn>
         <v-overlay  :absolute="absolute"  :value="overlay" style="transform-origin: center;">
-            <Share @updateOverlay = "overlay= ($event)" style="width: 100vw;"/>
+            <Share @updateOverlay = "overlay= ($event)" style="width: 100vw;" :subject="subject" :discription="discription"/>
         </v-overlay>
 
-        <v-btn rounded color="primary" dark> Buy Now</v-btn>
+        
+            <v-btn rounded color="primary" dark> Buy Now</v-btn>
+        
     </v-row>
 </template>
 
@@ -15,6 +17,7 @@ import Share from './Share.vue'
     export default{
         name: 'Footer',
         components: {Share},
+        props: ["subject", "discription"],
         data() 
         {
             return  {

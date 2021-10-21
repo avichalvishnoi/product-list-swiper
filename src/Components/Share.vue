@@ -3,11 +3,17 @@
         
         <v-subheader>Share to:</v-subheader>
         <v-card-text >   
-            <v-row v-for="platform in socialPlatform" :key="platform.id" align="center" class="ma-4">
-                <img :src="platform.image" height="40px" width="40px" alt="Icon" />
-                <p class="ml-4">{{platform.name}}</p>
-            </v-row>
-            </v-card-text>
+            <ShareNetwork
+                v-for="platform in socialPlatform"      :key="platform.id"
+                :network="platform.name"                :url="currentUrl"
+                :title="subject"                        :description="discription"
+            >
+                <v-row  align="center" class="ma-4">
+                    <img :src="platform.image" height="40px" width="40px" alt="Icon" />
+                    <p class="ml-4">{{platform.name}}</p>
+                </v-row>
+            </ShareNetwork>
+        </v-card-text>
         
         
     </v-card>   
@@ -16,6 +22,7 @@
 <script>
     export default  {
         name: "Share",
+        props: ["subject", "discription"],
         data()
         {
             return  {
@@ -35,7 +42,8 @@
                         name: "Twitter",
                         link: ""
                     }
-                ]
+                ],
+                currentUrl: window.location.pathname
             }
         }
     }

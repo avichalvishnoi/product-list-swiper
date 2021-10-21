@@ -30,7 +30,7 @@ import 'swiper/css/swiper.css'
             }
         },
         async created()
-        {   console.log("created called")
+        {   
             let that = this;            
             let url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTXXohJ3qiYbvGvKURF_gP1Wu6_Cqfz5r369LeXMhclvxRvkGikJJX-gE2Z7rlhFN8tIE8_UdoFequ7/pub?gid=0&single=true&output=csv'
                 await this.$papa.parse(url, {
