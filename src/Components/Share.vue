@@ -1,6 +1,6 @@
 <template>
     <v-card  @click="$emit('updateOverlay', false)" light >
-<!--         
+        
         <v-subheader>Share to:</v-subheader>
         <v-card-text >   
             <ShareNetwork
@@ -13,7 +13,7 @@
                     <p class="ml-4">{{platform.name}}</p>
                 </v-row>
             </ShareNetwork> 
-        </v-card-text>-->
+        </v-card-text>
         
         
     </v-card>   
