@@ -28,13 +28,13 @@ import Share from './Share.vue'
 
         methods:{
             shareFun()
-            {   console.log("share fun called")
+            {   
                 const shareButton = document.querySelector('.share-button');
                 const shareDialog = document.querySelector('.share-dialog');
 
                 shareButton.addEventListener('click', event => {
-                      if (navigator.share) 
-                      {
+                      if (!navigator.share) 
+                      {console.log("share fun if condition called")
                         navigator.share({
                             title: 'WebShare API Demo',
                             url: 'https://codepen.io/ayoisaiah/pen/YbNazJ'
@@ -44,7 +44,7 @@ import Share from './Share.vue'
                         .catch(console.error);
                     }
                     else 
-                    {
+                    {console.log("share fun else condition called")
                         shareDialog.classList.add('is-open');
                     }
                 });
