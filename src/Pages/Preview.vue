@@ -1,5 +1,5 @@
 <template>   
-    <v-app  style="height: 100%;">         
+    <v-app  style="height: 100vh;">         
         <swiper ref="mySwiper" @slideChange="swipeSlide" :options="swiperOptions" :slides-per-view="1" :space-between="0">
             <swiper-slide v-for="item in product" :key="item.id">
                 <Card :product="item" style="height: 100vh; max-width:400px;"/>

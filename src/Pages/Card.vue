@@ -1,9 +1,9 @@
 <template>
         <v-card v-if="product" style=" background: #f5f5f5;">
-            <Head style="height: 6%;" :product="product" class="px-6"/>
-            <Imge  style="height: 40%; " :imageLink="(product.Image)"/>         
-            <Body style="height: 40%;" :ProductDetails="product" class="mx-6"/>       
-            <Footer style="height: 14%;" :product="product" class="mx-6"/>             
+            <Head style="height: 6vh;" :product="product" class="px-6"/>
+            <Imge  style="height: 40vh; " :imageLink="(product.Image)"/>         
+            <Body style="height: 40vh;" :ProductDetails="product" class="mx-6"/>       
+            <Footer style="height: 14vh;" :product="product" class="mx-6"/>             
         </v-card>
 </template>
 

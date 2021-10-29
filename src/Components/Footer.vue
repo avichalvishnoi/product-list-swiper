@@ -1,6 +1,6 @@
 <template>
-    <v-row justify="end" align-content="start">
-        <v-btn :href="product.Origin" color="primary" fab dark><v-icon>{{icons.mdiCart}}</v-icon></v-btn>
+    <v-row justify="end" align-content="center">
+        <v-btn :href="product.Origin" color="primary" target="_blank" dark>BUY NOW</v-btn>
     </v-row>
 </template>
 
