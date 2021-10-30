@@ -43,7 +43,7 @@
                         link: ""
                     }
                 ],
-                currentUrl: window.location.pathname
+                currentUrl: window.document.location.href
             }
         }
     }

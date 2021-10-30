@@ -1,12 +1,18 @@
 <template> 
     <v-row align="center" justify="space-between" class="ma-1 primary" dark>
         <h4 style="color: white;">{{product.Shop}}</h4>
-        <v-icon  @click="shareViaWebShare" class="sucess" dark>
+        <!-- <v-icon @click="overlay= !overlay"  class="sucess" dark>
             {{icons.mdiShareVariant}}
         </v-icon>
-        <!-- @click="overlay= !overlay"<v-overlay  :absolute="absolute"  :value="overlay" style="transform-origin: center;"> 
+        <v-overlay  :absolute="absolute"  :value="overlay" style="transform-origin: center;"> 
             <Share @updateOverlay="overlay= ($event)" :subject="product.Name" :discription="product.Discription"/>
-        </v-overlay>   -->
+        </v-overlay>  -->
+        <div>
+          <div v-if="webShareApiSupported">
+            <button @click="shareViaWebShare" id="shareImgBtn">click me</button>
+          </div>
+          <div v-else><p>Not Supported</p></div>
+        </div>
     </v-row>
 </template>
 
@@ -35,6 +41,12 @@ export default  {
                           url: 'URL to be shared'
                         })
                       }
+                    },
+                    computed: {
+                      webShareApiSupported() {
+                        return navigator.share
+                      }
                     }
+                    
                 }
 </script>
