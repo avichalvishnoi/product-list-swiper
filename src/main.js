@@ -5,12 +5,13 @@ import store from './store'
 import vuetify from './plugins/vuetify'
 import VuePapaParse from 'vue-papa-parse'
 import VueSocialSharing from 'vue-social-sharing'
+import vue100vh from 'vue-100vh'
 
 Vue.use(VueSocialSharing);
-Vue.use(VuePapaParse)
+Vue.use(VuePapaParse);
+Vue.use(vue100vh);
 
-//import * as Papa from 'papaparse'
-//Vue.use(Papa)
+
 
 new Vue({
   router,
