@@ -1,17 +1,17 @@
 <template> 
     <v-row align="center" justify="space-between" class="ma-1 primary" dark>
         <h4 style="color: white;">{{product.Shop}}</h4>
-        <!-- <v-icon @click="overlay= !overlay"  class="sucess" dark>
-            {{icons.mdiShareVariant}}
-        </v-icon>
-        <v-overlay  :absolute="absolute"  :value="overlay" style="transform-origin: center;"> 
-            <Share @updateOverlay="overlay= ($event)" :subject="product.Name" :discription="product.Discription"/>
-        </v-overlay>  -->
+        <!--   -->
         <div>
           <div v-if="webShareApiSupported">
-            <button @click="shareViaWebShare" id="shareImgBtn">click me</button>
+            <v-icon @click="shareViaWebShare" id="shareImgBtn" class="sucess" dark>{{icons.mdiShareVariant}}</v-icon>
           </div>
-          <div v-else><p>Not Supported</p></div>
+          <div v-else>
+              <v-icon @click="overlay= !overlay"  class="sucess" dark>{{icons.mdiShareVariant}}</v-icon>
+                <v-overlay  :absolute="absolute"  :value="overlay" style="transform-origin: center;"> 
+                    <Share @updateOverlay="overlay= ($event)" :subject="product.Name" :discription="product.Discription"/>
+                </v-overlay>
+          </div>
         </div>
     </v-row>
 </template>
@@ -29,17 +29,18 @@ export default  {
                         return  {
                                     absolute: true,
                                     overlay: false,
-                                    icons: { mdiShareVariant }
+                                    icons: { mdiShareVariant },
+                                    shareData: {
+                                                title: this.product.Name,
+                                                text: this.product.Discription,
+                                                url: window.document.location.href
+                                               }
                                 }
                     },
                     methods:{
                       shareViaWebShare() 
                       {
-                        navigator.share({
-                          title: 'Title to be shared',
-                          text: 'Text to be shared',
-                          url: 'URL to be shared'
-                        })
+                        navigator.share(this.shareData)
                       }
                     },
                     computed: {
